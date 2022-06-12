@@ -9,9 +9,13 @@ do {
             alert("Casi puede pasar");
             preguntarDeVuelta = true;
             break;
-            case "rojo":
-                alert("no puede pasar");
-                break;
+        case "rojo":
+            alert("no puede pasar");
+            preguntarDeVuelta=true;
+            break;
+        case "esc":
+            alert("eligio salir");
+            break;
         default:
             alert("Ha ingresado un valor no valido");
             preguntarDeVuelta = true;
