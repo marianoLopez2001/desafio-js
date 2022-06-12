@@ -4,6 +4,7 @@ do {
     switch (pregunta) {
         case "verde":
             alert("Puede pasar");
+            preguntarDeVuelta=false;
             break;
         case "amarillo":
             alert("Casi puede pasar");
@@ -15,6 +16,7 @@ do {
             break;
         case "esc":
             alert("eligio salir");
+            preguntarDeVuelta=false;
             break;
         default:
             alert("Ha ingresado un valor no valido");
