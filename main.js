@@ -12,7 +12,6 @@ if (pregunta === true) {
         if (catalogo.includes(productoAgregado)) {
             alert(`El producto ${productoAgregado} ha sido agregado correctamente.`);
             listaDeCompras.push(productoAgregado);
-            console.log(listaDeCompras);
             askAgain = false;
         } else {
             alert("error")
