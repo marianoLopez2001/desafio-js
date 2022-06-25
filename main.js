@@ -12,9 +12,15 @@ if (pregunta === true) {
         if (catalogo.includes(productoAgregado)) {
             alert(`El producto ${productoAgregado} ha sido agregado correctamente.`);
             listaDeCompras.push(productoAgregado);
-            askAgain = false;
         } else {
-            alert("error")
+            alert("No eligió un producto de nuestro catalogo")
+        }
+        let repregunta = confirm("desea mas productos?")
+        if (repregunta === true) {
+            askAgain=true
+        }
+        else {
+            askAgain=false
         }
     } while (askAgain);
 
