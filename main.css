@@ -1,0 +1,14 @@
+body {
+    display: flex;
+}
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    margin: 2rem;
+    padding: 1rem;
+    height: 367px;
+}
+.contenedor, img {
+    max-width: 200px;
+}

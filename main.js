@@ -1,31 +1,56 @@
-let listaDeCompras = ["pan", "huevos", "jamon", "queso", "lechuga", "tomate"];
-let catalogo = ["cebolla", "manteca", "leche", "morron"]
-askAgain = true;
+const Catalogo = [
+    {        id: 1,
+        nombre: "Remera",
+        marca: "nike",
+        precio: 250,
+        img: "./images/remera.webp",
+        stock: 1,
 
-alert(`Esta es tu lista de compras actualmente: ${listaDeCompras}.`);
+    },
+    {
+        id: 2,
+        nombre: "Buzo",
+        marca: "adidas",
+        precio: 600,
+        img: "./images/buzo.webp",
+        stock: 3
+    },
+    {
+        id: 3,
+        nombre: "Campera",
+        marca: "adidas",
+        precio: 700,
+        img: "./images/campera.webp",
+        stock: 1
+    },
+    {
+        id: 4,
+        nombre: "Pantalon",
+        marca: "nike",
+        precio: 400,
+        img: "./images/pantalones.webp",
+        stock: 2
+    },
+    {
+        id: 5,
+        nombre: "Zapatilla",
+        marca: "nike",
+        precio: 800,
+        img: "./images/zapatilla.webp",
+        stock: 1
+    }
+]
 
-let pregunta = confirm("¿Te olvidaste de agregar algo?");
+    for (const producto of Catalogo) {
 
-if (pregunta === true) {
-    do {
-        productoAgregado = prompt(`Elija el producto deseado: ${catalogo}`);
-        if (catalogo.includes(productoAgregado)) {
-            alert(`El producto ${productoAgregado} ha sido agregado correctamente.`);
-            listaDeCompras.push(productoAgregado);
-        } else {
-            alert("No eligió un producto de nuestro catalogo")
-        }
-        let repregunta = confirm("desea mas productos?")
-        if (repregunta === true) {
-            askAgain=true
-        }
-        else {
-            askAgain=false
-        }
-    } while (askAgain);
-
-    alert(`Tu lista de compras final contiene: ${listaDeCompras}.`);
-
-} else {
-    alert(`Tu lista de compras final contiene: ${listaDeCompras}.`);
-}
+        let padre = document.createElement("div");
+    
+        padre.innerHTML = `<div class="contenedor">
+                               <h2>Nombre: ${producto.nombre}</h2>
+                               <p>Precio: ${producto.precio}</p>
+                               <img src="${producto.img}" alt="">
+                            </div>
+                            `;
+    
+        document.body.appendChild(padre)
+    }
